@@ -2,10 +2,9 @@ package org.apache.cordova.firebase;
 
 import android.util.Log;
 
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.FirebaseInstanceIdService;
+import com.google.firebase.messaging.FirebaseMessagingService;
 
-public class FirebasePluginInstanceIDService extends FirebaseInstanceIdService {
+public class FirebasePluginInstanceIDService extends FirebaseMessagingService {
 
     private static final String TAG = "FirebasePlugin";
 
@@ -15,11 +14,9 @@ public class FirebasePluginInstanceIDService extends FirebaseInstanceIdService {
      * is initially generated so this is where you would retrieve the token.
      */
     @Override
-    public void onTokenRefresh() {
+    public void onNewToken(String refreshedToken) {
         // Get updated InstanceID token.
-        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
         Log.d(TAG, "Refreshed token: " + refreshedToken);
-
         FirebasePlugin.sendToken(refreshedToken);
     }
 }
