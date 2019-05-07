@@ -91,8 +91,8 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 
 		<header-file src="src/ios/Firebase/Firebase.h" />
 
-		<framework custom="true" src="src/ios/Crashlytics/Crashlytics.framework" />
-		<framework custom="true" src="src/ios/Crashlytics/Fabric.framework" />
+		<!--framework custom="true" src="src/ios/Crashlytics/Crashlytics.framework" />
+		<framework custom="true" src="src/ios/Crashlytics/Fabric.framework" /-->
 		<framework custom="true" src="src/ios/Firebase/Analytics/GoogleAppMeasurement.framework" />
 		<framework custom="true" src="src/ios/Firebase/Analytics/MeasurementNanoPB.framework" />
 		<framework custom="true" src="src/ios/Firebase/Analytics/FirebaseCore.framework" />
